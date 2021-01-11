@@ -140,6 +140,8 @@ export default class App extends Component {
             });
           }
           else {
+            console.log("ERROR ------------------");
+            console.log(data);
             this.state.errors.push(name);
           }
 
@@ -238,7 +240,6 @@ export default class App extends Component {
       searchParams.set("names", this.state.animeLists.map(x => x.name).join(","));
 
       shareLink = location.protocol + '//' + location.host + location.pathname + "?" + searchParams.toString();
-      
     }
 
     let count = 0;
@@ -247,7 +248,7 @@ export default class App extends Component {
       <div className="centered app">
         <div className="centered info">
           <div className="centered search-area">
-            <p className="subtle search-help">Enter a list of usernames separated by commas. For example: <code>unusedusername, ihateusernames69, ACoolUsername72</code></p>
+            <p className="subtle search-help">Enter a list of usernames separated by commas.<br></br> For example: <code>unusedusername, ihateusernames69, ACoolUsername72</code></p>
             <input type="text" defaultValue={names? names.join(", ") : ""} className="username-list" onKeyDown={(e) => this.onSearch(e)}></input>
             {this.state.resultStatus == 2? 
               <p className="subtle search-help">To share these results, share the following link:<br></br><code>{shareLink}</code></p>
@@ -273,7 +274,9 @@ export default class App extends Component {
                     <tr>
                       <th></th>
                       {this.state.animeLists.map(x => <th key={x.name}>
-                        {x.name}
+                        <a href={"https://myanimelist.net/profile/" + x.name} target="_blank">
+                          {x.name}
+                        </a>
                       </th>)}
                     </tr>
                   </thead>
