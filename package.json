@@ -5,7 +5,6 @@
   "main": "src/server/index.js",
   "scripts": {
     "heroku-prebuild": "npm install --dev",
-    "build": "node node_modules/webpack/bin/webpack.js --mode production",
     "start": "npm run build && node src/server/index.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
