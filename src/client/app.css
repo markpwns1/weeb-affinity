@@ -1,8 +1,196 @@
-h1 {
-  color: green;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-  text-align: center;
+input[type=button] {
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(128, 128, 128);
+    /* box-shadow: 0px 0px 5px rgb(128, 128, 128); */
+    min-width: 100px;
+}
+
+input[type=button]:hover {
+    border-color: rgb(142, 178, 194);
+    cursor: pointer;
+}
+
+input[type=button]:active {
+    background-color: rgb(200, 219, 243);
+    border-color: rgb(142, 178, 194);
+    cursor: pointer;
+}
+
+input[type=text] {
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(128, 128, 128);
+    /* box-shadow: 0px 0px 5px rgb(128, 128, 128); */
+}
+
+input[type=text]:hover {
+    border-color: rgb(142, 178, 194);
+}
+
+input[type=text]:active {
+    border-color: white;
+    /* box-shadow: 0px 0px 0px rgb(128, 128, 128); */
+}
+
+input[type=text]:focus {
+    border-color: rgb(142, 178, 194);
+}
+
+.info {
+    margin: 5px;
+}
+
+/* Copied from https://stackoverflow.com/questions/4151743/how-can-i-change-the-thickness-of-my-hr-tag */
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: gray; /* old IE */
+    background-color: gray; /* Modern Browsers */
+}
+
+.centered {
+    margin: auto;
+    text-align: center;
+}
+
+
+/* ------------------ APP SPECIFIC STYLES ------------------ */
+
+.search-area {
+  margin-bottom: 30px;
+}
+
+.username-list {
+  width: 100%;
+}
+
+th {
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  min-width: 150px;
+}
+
+.score {
+  margin-left: 5px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.seasonal {
+  margin-right: 5px;
+  font-size: 12px;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+th.anime-title {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10px;
+  max-width: 250px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+thead > tr > th {
+  font-weight: bold;
+}
+
+th.ws-watching {
+  background-color: rgb(213, 255, 203);
+}
+
+th.ws-watched {
+  background-color: rgb(157, 255, 165);
+}
+
+th.ws-on-hold {
+  background-color: rgb(255, 248, 157);
+}
+
+th.ws-dropped {
+  background-color: rgb(255, 157, 157);
+}
+
+th.ws-ptw {
+  background-color: rgb(240, 240, 240);
+}
+
+th.ws-not-interested {
+  background-color: rgb(219, 219, 219);
+}
+
+table {
   margin: auto;
+}
+
+.subtle {
+  color: gray;
+  font-size: small;
+  font-style: italic;
+}
+
+.search-help {
+  margin-bottom: 5px;
+}
+
+.app {
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.username-list {
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+  font-size: 14px;
+  padding-left: 10px !important;
+  padding-top: 7px !important;
+}
+
+.info {
+  margin: auto;
+  margin-bottom: 5px;
+  text-align: left;
+  /* width: 100%; */
+  width: 50vw;
+}
+
+.info-section {
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.share-link {
+  text-align: right;
+  float: right;
+}
+
+.load-more-area {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  font-weight: bold;
 }
