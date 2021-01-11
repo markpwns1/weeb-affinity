@@ -5,20 +5,19 @@
   "main": "src/server/index.js",
   "scripts": {
     "heroku-prebuild": "npm install --dev",
-    "build": "webpack --mode production",
+    "build": "node node_modules/webpack/bin/webpack.js --mode production",
     "start": "npm run build && node src/server/index.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "web": "npm run start"
+    "web": "npm run start",
+    "heroku-postbuild": "webpack --config webpack.prod.js"
   },
   "author": "Sandeep Raveesh",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
-    "node-myanimelist": "^3.0.4",
-    "pkce-challenge": "^2.1.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
